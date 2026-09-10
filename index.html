@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual de Usuario — CREAR</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="sidebar">
+  <div class="brand">
+    <img src="assets/images/logo.png" alt="CREAR">
+    <div><div class="brand-name">CREAR</div><div class="brand-sub">Manual de Usuario</div></div>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar en el manual...">
+  </div>
+  <div class="nav-item active" data-section="portada" onclick="showSection('portada')"> Inicio</div>
+  <div class="nav-section-label">General</div>
+  <div class="nav-item" data-section="inicio-nav" onclick="showSection('inicio-nav')">Cómo empezar</div>
+  <div class="nav-item" data-section="dashboard" onclick="showSection('dashboard')">El Panel de Inicio</div>
+  <div class="nav-section-label">Alumnas</div>
+  <div class="nav-item" data-section="alumnos" onclick="showSection('alumnos')">Gestión de Alumnas</div>
+  <div class="nav-item" data-section="ficha-medica" onclick="showSection('ficha-medica')">Ficha Médica</div>
+  <div class="nav-section-label">Docentes</div>
+  <div class="nav-item" data-section="profesores" onclick="showSection('profesores')">Profesores</div>
+  <div class="nav-item" data-section="licencias" onclick="showSection('licencias')">Licencias y Suplencias</div>
+  <div class="nav-section-label">Academia</div>
+  <div class="nav-item" data-section="clases" onclick="showSection('clases')">Clases y Comisiones</div>
+  <div class="nav-item" data-section="inscripciones" onclick="showSection('inscripciones')">Inscripciones</div>
+  <div class="nav-item" data-section="asistencia" onclick="showSection('asistencia')">Asistencia</div>
+  <div class="nav-section-label">Administración</div>
+  <div class="nav-item" data-section="pagos" onclick="showSection('pagos')">Pagos y Cuotas</div>
+  <div class="nav-item" data-section="sueldos" onclick="showSection('sueldos')">Sueldos</div>
+  <div class="nav-item" data-section="evaluaciones" onclick="showSection('evaluaciones')">Evaluaciones</div>
+  <div class="nav-section-label">Organización</div>
+  <div class="nav-item" data-section="eventos" onclick="showSection('eventos')">Eventos</div>
+  <div class="nav-item" data-section="calendario" onclick="showSection('calendario')">Calendario</div>
+  <div class="nav-item" data-section="reportes" onclick="showSection('reportes')">Reportes</div>
+  <div class="nav-item" data-section="notificaciones" onclick="showSection('notificaciones')">Notificaciones</div>
+  <div class="nav-section-label">Sistema</div>
+  <div class="nav-item" data-section="configuracion" onclick="showSection('configuracion')">Configuración</div>
+  <div class="nav-item" data-section="faq" onclick="showSection('faq')">Preguntas Frecuentes</div>
+</div>
+<div id="main">
+<div class="section active" id="sec-portada">
+<div class="cover">
+  <img src="assets/images/logo.png" alt="CREAR">
+  <h1>Manual de Usuario</h1>
+  <p>Sistema de Gestión Académica CREAR — Academia de Danzas</p>
+</div>
+<div class="role-grid">
+  <div class="role-card" onclick="showSection('inicio-nav')">
+    <div class="dot" style="background:#D70015"></div>
+    <h3>Directora</h3>
+    <p>Acceso completo: configuración, sueldos, reportes y todo el resto del sistema.</p>
+  </div>
+  <div class="role-card" onclick="showSection('inicio-nav')">
+    <div class="dot" style="background:#0040DD"></div>
+    <h3>Secretaria</h3>
+    <p>Gestión diaria: alumnas, inscripciones, cobros y asistencia — sin configuración ni sueldos.</p>
+  </div>
+  <div class="role-card" onclick="showSection('inicio-nav')">
+    <div class="dot" style="background:#248A3D"></div>
+    <h3>Profesora</h3>
+    <p>Su propia ficha, asistencia de sus comisiones, y carga de notas de Profesorado.</p>
+  </div>
+</div>
+<div class="callout callout-info">
+      <div class="callout-title">Cómo usar este manual</div>
+      <div class="callout-body">Elegí una sección del menú de la izquierda, o buscá una palabra clave arriba del todo. Cada pantalla real del sistema tiene su captura correspondiente para que puedas guiarte visualmente.</div>
+    </div>
+</div>
+<div class="section" id="sec-inicio-nav">
+<h1 class="page-title">Cómo empezar</h1>
+<p class="page-sub">Ingresar al sistema por primera vez</p>
+<span class="role-badge badge-todos">Todos los roles</span>
+<h2 class="subhead">Iniciar sesión</h2>
+<p class="body-text">Todo el personal ingresa con un usuario y contraseña que la Directora crea desde Configuración → Personal y Accesos.</p>
+<ol class="steps"><li>Abrí el sistema desde el navegador.</li>
+<li>Ingresá tu <strong>usuario</strong> (nombre.apellido) y tu <strong>contraseña</strong>.</li>
+<li>Tocá <strong>Iniciar sesión</strong>.</li>
+<li>Si olvidaste tu contraseña, tocá <em>¿Olvidaste tu contraseña?</em> y seguí las instrucciones que llegan a tu email.</li></ol>
+<figure class="shot">
+      <img src="assets/images/login.jpg" alt="Pantalla de inicio de sesión" loading="lazy">
+      <figcaption>Pantalla de Login</figcaption>
+    </figure>
+<div class="callout callout-tip">
+      <div class="callout-title">Primera vez</div>
+      <div class="callout-body">Si es tu primer ingreso, la Directora ya te creó el usuario desde Configuración — llegó una contraseña temporal a tu email que podés cambiar apenas entrás.</div>
+    </div>
+</div>
+<div class="section" id="sec-dashboard">
+<h1 class="page-title">El Panel de Inicio</h1>
+<p class="page-sub">Tu resumen del día apenas entrás al sistema</p>
+<span class="role-badge badge-todos">Todos los roles</span>
+<p class="body-text">Al iniciar sesión, ves un resumen general: cuántas alumnas hay activas, inscripciones del mes, cuotas vencidas que necesitan seguimiento, y lo cobrado hasta el momento.</p>
+<figure class="shot">
+      <img src="assets/images/inicio.jpg" alt="Panel de inicio con KPIs y widgets" loading="lazy">
+      <figcaption>Inicio — vista general</figcaption>
+    </figure>
+<h2 class="subhead">Por qué algunas tarjetas son de color y otras no</h2>
+<p class="body-text">El sistema usa el color a propósito: las tarjetas blancas son solo información (no requieren nada de vos). Si una tarjeta aparece en <strong style="color:#D70015">rojo</strong>, <strong style="color:#B25000">amarillo</strong> o algún otro color de alerta, significa que ese dato necesita tu atención.</p>
+<div class="callout callout-tip">
+      <div class="callout-title">Accesos rápidos</div>
+      <div class="callout-body">Desde Inicio también podés crear una alumna nueva o una inscripción sin tener que ir al módulo correspondiente — los botones están arriba a la derecha.</div>
+    </div>
+</div>
+<div class="section" id="sec-alumnos">
+<h1 class="page-title">Gestión de Alumnas</h1>
+<p class="page-sub">Alta, edición y ficha completa de cada alumna</p>
+<span class="role-badge badge-secretaria">Directora y Secretaria</span>
+<h2 class="subhead">Cargar una alumna nueva</h2>
+<ol class="steps"><li>Andá a <strong>Alumnos</strong> en el menú lateral.</li>
+<li>Tocá <strong>+ Nuevo alumno</strong>, arriba a la derecha.</li>
+<li>Completá los datos obligatorios (marcados con *): nombre, apellido, DNI, fecha de nacimiento, teléfono, email, adulto responsable.</li>
+<li>Si tiene hermanas ya inscriptas, buscalas en <em>Grupo familiar</em> para aplicar el 10% de descuento automáticamente.</li>
+<li>Tocá <strong>Guardar alumno</strong>.</li></ol>
+<figure class="shot">
+      <img src="assets/images/nuevo-alumno.jpg" alt="Formulario de alta de alumna" loading="lazy">
+      <figcaption>Modal Nuevo Alumno</figcaption>
+    </figure>
+<div class="callout callout-warn">
+      <div class="callout-title">DNI duplicado</div>
+      <div class="callout-body">Si el sistema te avisa que el DNI ya existe, revisá bien antes de continuar — puede que la alumna ya esté cargada de una inscripción anterior.</div>
+    </div>
+<h2 class="subhead">Ver y buscar alumnas</h2>
+<p class="body-text">La tabla principal te deja buscar por nombre o DNI, y filtrar por grupo o estado (activas/inactivas). Cada fila tiene 3 acciones: <strong>Ver Ficha</strong> (toda la información en detalle), <strong>Modificar</strong> (edición rápida) y <strong>Dar de baja</strong> (baja lógica, nunca se borra el historial).</p>
+<figure class="shot">
+      <img src="assets/images/alumnos.jpg" alt="Tabla de gestión de alumnos" loading="lazy">
+      <figcaption>Listado de Alumnas</figcaption>
+    </figure>
+</div>
+<div class="section" id="sec-ficha-medica">
+<h1 class="page-title">Ficha Médica</h1>
+<p class="page-sub">Datos de salud a mano ante cualquier emergencia</p>
+<span class="role-badge badge-secretaria">Directora y Secretaria</span>
+<ol class="steps"><li>Desde Alumnos, tocá <strong>Ver Ficha</strong> en la fila de la alumna.</li>
+<li>Andá a la tab <strong>Ficha Médica</strong>.</li>
+<li>Si es la primera vez, vas a ver el botón <strong>+ Agregar Ficha Médica</strong> — tocalo para cargar los datos.</li>
+<li>Completá grupo sanguíneo, alergias, medicación, obra social, vencimiento del apto físico y contacto de emergencia.</li></ol>
+<figure class="shot">
+      <img src="assets/images/ficha-medica.jpg" alt="Ficha médica de la alumna con datos cargados" loading="lazy">
+      <figcaption>Ficha Médica — con datos</figcaption>
+    </figure>
+<div class="callout callout-warn">
+      <div class="callout-title">Apto físico por vencer</div>
+      <div class="callout-body">El sistema te avisa automáticamente cuando el apto físico de una alumna está por vencer, con una alerta amarilla arriba de todo en su ficha.</div>
+    </div>
+</div>
+<div class="section" id="sec-profesores">
+<h1 class="page-title">Profesores</h1>
+<p class="page-sub">Plantel docente, especialidades y disponibilidad</p>
+<span class="role-badge badge-secretaria">Directora y Secretaria</span>
+<p class="body-text">La tabla de Profesores muestra el plantel completo con sus especialidades, años de experiencia y estado (disponible o en licencia). Tocá <strong>Ver Ficha 360°</strong> para acceder a toda su información.</p>
+<figure class="shot">
+      <img src="assets/images/profesores.jpg" alt="Listado de profesores" loading="lazy">
+      <figcaption>Listado de Profesores</figcaption>
+    </figure>
+<h2 class="subhead">La Ficha 360° tiene 5 tabs</h2>
+<table class="field-table">
+<tr><th>Tab</th><th>Qué encontrás</th></tr>
+<tr><td>Info Básica</td><td>Datos de contacto, fecha de nacimiento, foto</td></tr>
+<tr><td>Perfil Profesional</td><td>Estudios, especialidades, biografía</td></tr>
+<tr><td>Datos Admin.</td><td>Sueldo, contratación — solo visible para Directora</td></tr>
+<tr><td>Licencias</td><td>Calendario de ausencias y búsqueda de suplentes</td></tr>
+<tr><td>Coreografías</td><td>Historial de coreografías dirigidas por evento</td></tr>
+</table>
+</div>
+<div class="section" id="sec-licencias">
+<h1 class="page-title">Licencias y Suplencias</h1>
+<p class="page-sub">Cuando una profesora falta, el sistema busca reemplazo solo</p>
+<span class="role-badge badge-secretaria">Directora y Secretaria</span>
+<ol class="steps"><li>Entrá a la Ficha 360° de la profesora → tab <strong>Licencias</strong>.</li>
+<li>Tocá <strong>+ Marcar Licencia</strong>.</li>
+<li>Elegí las fechas y el motivo (examen, viaje, enfermedad, otro).</li>
+<li>El sistema detecta solo qué comisiones se ven afectadas.</li>
+<li>Activá <em>Buscar suplente automáticamente por WhatsApp</em> para que se les consulte a otras profesoras disponibles.</li>
+<li>Vas a ver el estado <strong>Buscando reemplazo...</strong> hasta que alguien confirme por WhatsApp.</li></ol>
+<figure class="shot">
+      <img src="assets/images/ficha-profesor.jpg" alt="Ficha del profesor con calendario de licencias" loading="lazy">
+      <figcaption>Tab Licencias — con suplente confirmado</figcaption>
+    </figure>
+<div class="callout callout-tip">
+      <div class="callout-title">Confirmación automática</div>
+      <div class="callout-body">Apenas una profesora confirma la suplencia por WhatsApp, el estado cambia solo a "Confirmada" — no hace falta que lo cargues vos manualmente.</div>
+    </div>
+</div><div class="section" id="sec-clases">
+<h1 class="page-title">Clases y Comisiones</h1>
+<p class="page-sub">La oferta académica de la academia</p>
+<span class="role-badge badge-secretaria">Directora y Secretaria</span>
+<p class="body-text">Cada comisión combina una disciplina, un horario, una sala y una profesora. El cupo máximo institucional es de <strong>25 alumnas por comisión</strong>.</p>
+<figure class="shot">
+      <img src="assets/images/clases.jpg" alt="Listado de comisiones con barra de cupo" loading="lazy">
+      <figcaption>Clases y Comisiones</figcaption>
+    </figure>
+<h2 class="subhead">Leer la barra de cupo</h2>
+<table class="field-table">
+<tr><th>Color</th><th>Qué significa</th></tr>
+<tr><td style="color:#7C5FA8">Violeta</td><td>Cupo normal, hay lugar disponible</td></tr>
+<tr><td style="color:#B25000">Amarillo</td><td>Quedan pocos lugares (80% o más ocupado)</td></tr>
+<tr><td style="color:#D70015">Rojo + etiqueta "Cupo lleno"</td><td>Comisión completa — las nuevas inscripciones van a Lista de Espera</td></tr>
+</table>
+<h2 class="subhead">Ver el detalle de una comisión</h2>
+<p class="body-text">Tocá el nombre de cualquier comisión para ver un resumen completo: cuántas alumnas están inscriptas, el % de asistencia promedio, lo que factura por mes, y el listado completo de alumnas con su estado de pago.</p>
+<figure class="shot">
+      <img src="assets/images/detalle-comision.jpg" alt="Panel de detalle con roster de alumnas" loading="lazy">
+      <figcaption>Detalle de Comisión</figcaption>
+    </figure>
+</div>
+<div class="section" id="sec-inscripciones">
+<h1 class="page-title">Inscripciones</h1>
+<p class="page-sub">Anotar alumnas ya cargadas a una comisión</p>
+<span class="role-badge badge-secretaria">Directora y Secretaria</span>
+<ol class="steps"><li>Tocá <strong>+ Nueva inscripción</strong>.</li>
+<li>Elegí la alumna (ya tiene que estar cargada en Alumnos).</li>
+<li>Elegí la comisión.</li>
+<li>Si hay cupo, la inscripción queda <strong>Confirmada</strong>.</li>
+<li>Si no hay cupo, el sistema te ofrece anotarla en <strong>Lista de Espera</strong> — se le avisa por WhatsApp automáticamente apenas se libera un lugar.</li></ol>
+<figure class="shot">
+      <img src="assets/images/inscripciones.jpg" alt="Tabla de inscripciones con estados" loading="lazy">
+      <figcaption>Listado de Inscripciones</figcaption>
+    </figure>
+<div class="callout callout-info">
+      <div class="callout-title">Estado "En espera"</div>
+      <div class="callout-body">Las alumnas en lista de espera aparecen mezcladas en la misma tabla, con la etiqueta violeta "En espera" — no hace falta ir a un lugar aparte a buscarlas.</div>
+    </div>
+</div>
+<div class="section" id="sec-asistencia">
+<h1 class="page-title">Asistencia</h1>
+<p class="page-sub">Pasar lista, comisión por comisión</p>
+<span class="role-badge badge-todos">Todos los roles</span>
+<ol class="steps"><li>Elegí la <strong>Comisión</strong> y la <strong>Fecha</strong> arriba de todo.</li>
+<li>Tocá cada interruptor para marcar Presente / Ausente.</li>
+<li>Tocá <strong>Guardar Asistencia</strong> al terminar.</li></ol>
+<figure class="shot">
+      <img src="assets/images/asistencia.jpg" alt="Pasar lista con toggles de presente/ausente" loading="lazy">
+      <figcaption>Control de Asistencia</figcaption>
+    </figure>
+<div class="callout callout-warn">
+      <div class="callout-title">Alumna por debajo del 75%</div>
+      <div class="callout-body">Si una alumna cae debajo del 75% de asistencia mensual, aparece marcada en rojo con un botón para avisarle a la familia por WhatsApp directo desde esta pantalla.</div>
+    </div>
+</div>
+<div class="section" id="sec-pagos">
+<h1 class="page-title">Pagos y Cuotas</h1>
+<p class="page-sub">Cuenta corriente de cada alumna</p>
+<span class="role-badge badge-secretaria">Directora y Secretaria</span>
+<p class="body-text">La mayoría de los pagos llegan directo desde la <strong>PWA de las familias</strong> (Mercado Pago) y el estado se actualiza solo, sin que cargues nada. El panel de "Registrar Pago Manual" es <strong>solo para efectivo o transferencia</strong>.</p>
+<figure class="shot">
+      <img src="assets/images/cobros.jpg" alt="Cuenta corriente y registro de pago manual" loading="lazy">
+      <figcaption>Cobros y Cuotas</figcaption>
+    </figure>
+<ol class="steps"><li>Buscá a la alumna (o cambiá a la vista <em>Por comisión</em> para ver el total de una comisión entera).</li>
+<li>Si el pago fue en efectivo o transferencia, completá el monto y método en el panel de la derecha.</li>
+<li>Tocá <strong>Confirmar Pago</strong>.</li></ol>
+<div class="callout callout-tip">
+      <div class="callout-title">Recargo por mora</div>
+      <div class="callout-body">El sistema aplica automáticamente un 5% de recargo a partir del día 10 del mes — no hace falta calcularlo a mano.</div>
+    </div>
+</div>
+<div class="section" id="sec-sueldos">
+<h1 class="page-title">Sueldos</h1>
+<p class="page-sub">Liquidación mensual del personal</p>
+<span class="role-badge badge-directora">Solo Directora</span>
+<ol class="steps"><li>Tocá <strong>Generar del Mes</strong> — el sistema crea una fila de liquidación por cada persona, con estado "Pendiente".</li>
+<li>Revisá los montos (toman el sueldo base configurado por persona).</li>
+<li>Tocá <strong>Aprobar Liquidación</strong> cuando esté todo correcto.</li>
+<li>Una vez pagada, marcala como <strong>Pagada</strong>.</li></ol>
+<figure class="shot">
+      <img src="assets/images/sueldos.jpg" alt="Tabla de liquidación de sueldos por persona" loading="lazy">
+      <figcaption>Liquidación de Sueldos</figcaption>
+    </figure>
+<div class="callout callout-role">
+      <div class="callout-title">Solo Directora</div>
+      <div class="callout-body">Secretaria y Profesoras no ven el botón "Aprobar Liquidación" — los sueldos son información sensible reservada al rol Directora.</div>
+    </div>
+</div>
+<div class="section" id="sec-evaluaciones">
+<h1 class="page-title">Evaluaciones</h1>
+<p class="page-sub">Notas de Profesorado — Expresión, Ritmo y Técnica</p>
+<span class="role-badge badge-profesora">Todos los roles</span>
+<p class="body-text">Solo se cargan notas para las disciplinas de Profesorado (Danza Clásica, Jazz, Zapateo Americano, Danza Española). Las clases recreativas no tienen evaluación formal.</p>
+<figure class="shot">
+      <img src="assets/images/evaluaciones.jpg" alt="Tabla de notas por criterio y alumna" loading="lazy">
+      <figcaption>Evaluaciones y Notas</figcaption>
+    </figure>
+<ol class="steps"><li>Elegí el examen arriba de todo.</li>
+<li>Cargá la nota de cada alumna en Expresión, Ritmo y Técnica (escala 1 a 10).</li>
+<li>El promedio se calcula solo.</li>
+<li>Si necesitás corregir una nota ya cargada, tocá <strong>Corregir Nota</strong> — queda un registro de quién corrigió y cuándo.</li></ol>
+</div><div class="section" id="sec-eventos">
+<h1 class="page-title">Eventos</h1>
+<p class="page-sub">Muestras, festivales y la organización del show de fin de año</p>
+<span class="role-badge badge-secretaria">Directora y Secretaria</span>
+<ol class="steps"><li>Tocá <strong>+ Nuevo Evento</strong> para crear una muestra, festival o examen.</li>
+<li>Si activás <em>Habilitar cronograma</em>, vas a poder organizar las coreografías en tandas.</li></ol>
+<figure class="shot">
+      <img src="assets/images/eventos.jpg" alt="Cronograma del show organizado por tandas" loading="lazy">
+      <figcaption>Eventos — Cronograma del Show</figcaption>
+    </figure>
+<h2 class="subhead">Cronograma por tandas</h2>
+<p class="body-text">Cada tanda tiene un profesor responsable de backstage y su lista de coreografías, con el número de alumnas de cada una. Tocá <strong>Ver lista de alumnas</strong> para ver quién participa en cada coreografía puntual.</p>
+</div>
+<div class="section" id="sec-calendario">
+<h1 class="page-title">Calendario</h1>
+<p class="page-sub">Clases, eventos, cumpleaños y licencias en un solo lugar</p>
+<span class="role-badge badge-todos">Todos los roles</span>
+<p class="body-text">El calendario mensual combina automáticamente todo lo que ya cargaste en otros módulos — no hace falta cargar nada acá directamente.</p>
+<figure class="shot">
+      <img src="assets/images/calendario.jpg" alt="Vista mensual del calendario con leyenda de colores" loading="lazy">
+      <figcaption>Calendario</figcaption>
+    </figure>
+<ol class="steps"><li>Tocá cualquier día para ver el detalle de lo que pasa esa fecha.</li>
+<li>Usá los botones Día / Semana / Mes arriba a la derecha para cambiar la vista.</li></ol>
+</div>
+<div class="section" id="sec-reportes">
+<h1 class="page-title">Reportes</h1>
+<p class="page-sub">Morosidad y ocupación de un vistazo</p>
+<span class="role-badge badge-directora">Solo Directora</span>
+<figure class="shot">
+      <img src="assets/images/reportes.jpg" alt="Reportes de morosidad y ocupación de comisiones" loading="lazy">
+      <figcaption>Reportes y Estadísticas</figcaption>
+    </figure>
+<p class="body-text">Dos reportes principales: <strong>morosidad por alumna</strong> (quiénes tienen cuotas vencidas acumuladas) y <strong>ocupación de comisiones</strong> (qué tan llenas están, para decidir si conviene fusionar grupos chicos). Podés exportar todo a Excel o PDF con el botón de arriba.</p>
+</div>
+<div class="section" id="sec-notificaciones">
+<h1 class="page-title">Notificaciones</h1>
+<p class="page-sub">Todo lo que necesita tu atención, en un solo lugar</p>
+<span class="role-badge badge-todos">Todos los roles</span>
+<figure class="shot">
+      <img src="assets/images/notificaciones.jpg" alt="Panel de notificaciones con envío de WhatsApp masivo" loading="lazy">
+      <figcaption>Centro de Notificaciones</figcaption>
+    </figure>
+<p class="body-text">Cada notificación te lleva directo a la pantalla correspondiente al tocarla — una suplencia confirmada te lleva a la Ficha del Profesor, una cuota vencida te lleva a Cobros.</p>
+<h2 class="subhead">WhatsApp masivo</h2>
+<p class="body-text">Desde el mismo panel podés mandar un aviso a todas las familias de una comisión a la vez (por ejemplo, avisar que se suspende una clase).</p>
+</div>
+<div class="section" id="sec-configuracion">
+<h1 class="page-title">Configuración</h1>
+<p class="page-sub">El panel de control de toda la academia</p>
+<span class="role-badge badge-directora">Solo Directora</span>
+<figure class="shot">
+      <img src="assets/images/configuracion.jpg" alt="Panel de configuración con 6 tabs" loading="lazy">
+      <figcaption>Configuración — Personal y Accesos</figcaption>
+    </figure>
+<table class="field-table">
+<tr><th>Tab</th><th>Para qué sirve</th></tr>
+<tr><td>Personal y Accesos</td><td>Crear usuarios nuevos, restablecer claves, activar/desactivar personal</td></tr>
+<tr><td>Oferta y Horarios</td><td>Catálogo de disciplinas que ofrece la academia</td></tr>
+<tr><td>Criterios de Examen</td><td>Los criterios que se usan al cargar notas (Expresión, Ritmo, Técnica)</td></tr>
+<tr><td>Aranceles y Cobros</td><td>Cuota base, matrícula, % de mora y de descuento familiar</td></tr>
+<tr><td>Eventos</td><td>Redirige a Eventos — se gestiona ahí para no duplicar datos</td></tr>
+<tr><td>Institución y Notificaciones</td><td>Datos de la academia, integraciones (WhatsApp, Mercado Pago), avisos automáticos</td></tr>
+</table>
+<div class="callout callout-role">
+      <div class="callout-title">Panel exclusivo</div>
+      <div class="callout-body">Todo Configuración es visible únicamente para el rol Directora — ni Secretaria ni Profesoras tienen acceso a este módulo.</div>
+    </div>
+</div>
+<div class="section" id="sec-faq">
+<h1 class="page-title">Preguntas Frecuentes</h1>
+<p class="page-sub">Dudas comunes del uso diario</p>
+<div class="faq-item"><div class="faq-q">¿Cómo doy de baja a una alumna?</div><div class="faq-a">Desde Alumnos, tocá "Dar de baja" en su fila. Es una baja lógica — el historial de la alumna se conserva, no se borra nada.</div></div>
+<div class="faq-item"><div class="faq-q">¿Puedo recuperar una alumna dada de baja?</div><div class="faq-a">Sí, filtrá por Estado: Inactivos en la tabla de Alumnos y reactivala desde ahí.</div></div>
+<div class="faq-item"><div class="faq-q">¿Qué pasa si una profesora falta sin avisar con anticipación?</div><div class="faq-a">Igual podés marcar la licencia el mismo día — el sistema va a buscar suplente igual, aunque el tiempo de respuesta por WhatsApp puede ser más ajustado.</div></div>
+<div class="faq-item"><div class="faq-q">¿Los padres pueden ver las notas de sus hijas?</div><div class="faq-a">Sí, desde la PWA de familias, en la sección Notas.</div></div>
+<div class="faq-item"><div class="faq-q">¿Cómo cambio mi contraseña?</div><div class="faq-a">Desde el ícono de tu usuario abajo del menú lateral, o pidiéndole a la Directora que te la restablezca desde Configuración.</div></div>
+<div class="faq-item"><div class="faq-q">¿Qué significa el candado en Sueldos?</div><div class="faq-a">Indica que esa acción está bloqueada para tu rol — solo la Directora puede aprobar liquidaciones de sueldo.</div></div>
+</div>
+</div><script src="js/script.js"></script>
+</body>
+</html>
